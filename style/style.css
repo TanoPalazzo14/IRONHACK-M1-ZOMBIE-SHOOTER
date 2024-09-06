@@ -1,0 +1,22 @@
+html {
+  margin: 0px
+}
+
+body {
+  margin: 0px;
+}
+
+#game-box {
+  background-color: black;
+  height: 500px;
+  width: 900px;
+  position: relative;
+  text-align: center;
+  /* margin: auto; */
+  overflow: hidden;
+  cursor:none;
+}
+
+#background {
+  background-color: lightgrey;
+}
