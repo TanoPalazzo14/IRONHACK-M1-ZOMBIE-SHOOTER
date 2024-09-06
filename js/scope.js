@@ -2,8 +2,8 @@ class Scope {
 
   constructor () {
 
-    this.x = 100
-    this.y = 100
+    this.x = -20
+    this.y = -20
     this.h = 20
     this.w = 20
     this.radius = this.h/2
