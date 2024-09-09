@@ -8,31 +8,44 @@
 </head>
 <body>
   <div id="start-page">
-    <div class="container startingInfo">
-      <section clas="startInfo">
-        instrucciones del juego
+    <div class="container">
+      <section class="startInfo">
+        Parece que quieres poner a prueba tus cualidades para sobrevivir un apocalipsis zombie.<br><br>
+        Demuestra tu puntería y velocidad con el arma, para asi volverse indestructible una vez que la inminente amenaza zombie ataque a la humanidad.<br><br><br>
+        ¡¿QUE ESTAS ESPERANDO?!<br><br>
+        ¿Estas listo?<br><br>
+        ¡¡VAMOS!!
       </section>
-      <section clas="startInfo">
-        alguna foto y/o data
+      <section class="startInfo">
+        instrucciones del juego y/o fotos
       </section>
     </div>
-    <button id="startButton">Start Game!</button>
+    <button id="startButton">COMENZAR</button>
   </div>
   <div id="game-page" class="container">
     <!-- <section id="nivelador">
     
     </section> -->
     <section id="game-box">
-      <div id="front">
-        <img src="./images/box-3.png" id="box3">
-
+      
+      <div id="back-boards">
+        <!-- tablas con enemigos de atras -->
       </div>
-
-
-      <div id="back">
+      <div id="back-boxes">
         <img src="./images/box-1.png" id="box1">
         <img src="./images/box-2.png" id="box2">
+        <img src="./images/box-2.png" id="box4">
+        <img src="./images/wood-1.png" id="wood1">
+        
+      </div>
 
+      
+      <div id="front-boards">
+        <!-- tablas con enemigos de adelante  -->
+      </div>
+      <div id="front-boxes">
+        <img src="./images/box-3.png" id="box3">
+        <img src="./images/cofre-1.png" id="chest1">
       </div>
       <!-- <img src="./images/zombie1.png" alt=""> -->
     </section>
@@ -45,7 +58,7 @@
   <div id="end-page" class="container">
 
   </div>
-  <script src="./js/enemigos.js"></script>
+  <script src="./js/tabla.js"></script>
   <script src="./js/scope.js"></script>
   <script src="./js/script.js"></script>
 </body>
