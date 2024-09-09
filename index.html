@@ -7,13 +7,44 @@
   <title>Document</title>
 </head>
 <body>
-  <div id="background">
-
-    <div id="game-box">
+  <div id="start-page">
+    <div class="container startingInfo">
+      <section clas="startInfo">
+        instrucciones del juego
+      </section>
+      <section clas="startInfo">
+        alguna foto y/o data
+      </section>
     </div>
+    <button id="startButton">Start Game!</button>
+  </div>
+  <div id="game-page" class="container">
+    <!-- <section id="nivelador">
+    
+    </section> -->
+    <section id="game-box">
+      <div id="front">
+        <img src="./images/box-3.png" id="box3">
+
+      </div>
+
+
+      <div id="back">
+        <img src="./images/box-1.png" id="box1">
+        <img src="./images/box-2.png" id="box2">
+
+      </div>
+      <!-- <img src="./images/zombie1.png" alt=""> -->
+    </section>
+    <section id="scoreing">
+      <h1>Score: <span id="puntos">0</span></h1>
+      <h2>Time left:<br><span id="timer">00:00</span></h1>
+    </section>
     
   </div>
+  <div id="end-page" class="container">
 
+  </div>
   <script src="./js/enemigos.js"></script>
   <script src="./js/scope.js"></script>
   <script src="./js/script.js"></script>

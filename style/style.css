@@ -6,17 +6,100 @@ body {
   margin: 0px;
 }
 
-#game-box {
+.container {
+  padding-top: 60px;
+}
+
+#start-page section{
+  border: 4px solid rgb(136, 0, 0);
+  border-radius: 20px;
+  width: 250px;
+  height: 400px;
+  margin: 10px
+}
+#start-page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#start-page .startingInfo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#startButton {
+  height: 40px;
+  width: 140px;
+}
+
+#game-page {
+  display: none;
+  justify-content:center;
+  align-items: center;
+}
+
+#game-page section{
+  border: 4px solid rgb(136, 0, 0);
+  border-radius: 20px;
   background-color: black;
+  margin: 10px
+}
+#game-box {
+  background-image: url("../images/background.jpg");
   height: 500px;
   width: 900px;
   position: relative;
   text-align: center;
-  /* margin: auto; */
+  margin-left: 200px;
   overflow: hidden;
   cursor:none;
 }
 
-#background {
+#nivelador {
+  visibility: hidden;
+  height: 500px;
+  width: 150px;
+}
+
+#scoreing {
+  text-align: center;
+  height: 500px;
+  width: 150px;
+  color: rgb(136, 0, 0);
+}
+
+#scoreing h1 {
+}
+
+#scoreing h2 {
+}
+
+
+#game-box img{
+  position: absolute;
+}
+
+#body {
   background-color: lightgrey;
+}
+
+#box1{
+  width: 110px;
+  top: 310px;
+  left: 260px;
+}
+#box2{
+  width: 160px;
+  top:305px;
+  left: 300px;
+}
+#box3{
+  width: 170px;
+  top:380px;
+  left:100px;
+}
+#end-page {
+  display: none;
 }

@@ -1,20 +1,44 @@
 let gameBoxNode = document.querySelector("#game-box")
+let gamePageNode = document.querySelector("#game-page")
+let timerNode = document.querySelector("#timer")
+let startPageNode = document.querySelector("#start-page")
+let startButtonNode = document.querySelector("#startButton")
+let endPageNode = document.querySelector("#end-page")
 let scope = null
+const totalTime = 9999999
+let timeRemaining = totalTime
 
+function cronometro (){
+  let cronometro = setInterval (() => {
+    timeRemaining--
+    let minutos = Math.floor(timeRemaining/60).toString().padStart(2,"0")
+    let segundos = (timeRemaining%60).toString().padStart(2,"0")
+    timerNode.innerText = `${minutos}:${segundos}`
+    if (timeRemaining <= 0){
+      clearInterval(cronometro)
+      timeRemaining = totalTime
+      gameOver()
+    }
+  },1000)
+}
 
-
-
-
-
-
-
-
-scope = new Scope()
-setInterval(() => {
+function gameStart () {
+  startPageNode.style.display = `none`
+  gamePageNode.style.display = `flex`
+  scope = new Scope()
+  let theGame = setInterval(() => {
   
-  gameLoop()
+    gameLoop()
+  
+  },1000/60)
+  cronometro ()
+}
 
-},1000/60)
+function gameOver () {
+  gamePageNode.style.display = `none`
+  endPageNode.style.display = `flex`
+  clearInterval(theGame)
+}
 
 function gameLoop() {
 
@@ -22,8 +46,13 @@ function gameLoop() {
     scope.scopeMove(e)
   });
 
-  window.addEventListener("click", () => {
-    console.log("BANG!")
-  })
+  // window.addEventListener("click", () => {
+  //   console.log("BANG!")
+  // })
 
 }
+
+startButtonNode.addEventListener("click", () => {
+  console.log("START")
+  gameStart()
+})
