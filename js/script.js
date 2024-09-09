@@ -6,10 +6,12 @@ let startButtonNode = document.querySelector("#startButton")
 let endPageNode = document.querySelector("#end-page")
 let enemigosDelanteNode = document.querySelector("#front-boards")
 let enemigosAtrasNode = document.querySelector("#back-boards")
+let finalScoreNode = document.querySelector("#final-score")
+let score = 10
 const boardFrecuency = 2000
 const boardDuration = 3000
 let scope = null
-const totalTime = 120
+const totalTime = 10
 let timeRemaining = totalTime
 let theGame
 let posicion1Bool = false
@@ -111,7 +113,9 @@ function gameStart () {
 function gameOver () {
   gamePageNode.style.display = `none`
   endPageNode.style.display = `flex`
+  finalScoreNode.innerText = `${score}`
   clearInterval(theGame)
+
 }
 
 function gameLoop() {
