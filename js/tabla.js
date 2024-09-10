@@ -5,7 +5,6 @@ class Tabla {
     this.h = 200
     this.w = 100
     let personaje = (Math.ceil(Math.random()*5))
-    console.log(`img:${personaje}, posicion:${this.pos.posicion}`)
     this.node = document.createElement("img")
     this.node.src = `./images/zombie-boards-${personaje}.jpg`
     this.node.style.position = `absolute`
