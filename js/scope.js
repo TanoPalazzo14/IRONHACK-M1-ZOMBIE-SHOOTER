@@ -18,10 +18,15 @@ class Scope {
   }
   
   scopeMove (e) {
+
     let offsets = gameBoxNode.getBoundingClientRect()
     let left = offsets.left
-    this.node.style.top = `${(e.clientY-this.radius) - 70}px`;
+    let top = offsets.top
+    this.node.style.top = `${(e.clientY-this.radius) - top}px`;
     this.node.style.left = `${(e.clientX-this.radius) - left}px`;
+    this.x = e.clientX-left
+    this.y = e.clientY-70
+
     };
 
 }

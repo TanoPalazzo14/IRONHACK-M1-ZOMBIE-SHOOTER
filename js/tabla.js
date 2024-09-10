@@ -4,10 +4,10 @@ class Tabla {
     this.pos = pos
     this.h = 200
     this.w = 100
-    let personaje = (Math.ceil(Math.random()*4))
+    let personaje = (Math.ceil(Math.random()*5))
     console.log(`img:${personaje}, posicion:${this.pos.posicion}`)
     this.node = document.createElement("img")
-    this.node.src = `./images/zombie-boards-${personaje}-TEST.jpg`
+    this.node.src = `./images/zombie-boards-${personaje}.jpg`
     this.node.style.position = `absolute`
     this.node.style.top = `${this.pos.y}px`
     this.node.style.left = `${this.pos.x}px`
@@ -35,5 +35,10 @@ class Tabla {
 
   goingDown() {
 
+  }
+
+  getShot() {
+    this.node.style.display = `none`
+    this.node.remove()
   }
 }

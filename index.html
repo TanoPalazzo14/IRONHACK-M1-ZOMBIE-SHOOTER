@@ -9,7 +9,7 @@
 <body>
   <div id="start-page">
     <div class="container">
-      <section class="startInfo">
+      <section class="startInfo left">
         Parece que quieres poner a prueba tus cualidades para sobrevivir un apocalipsis zombie.<br><br>
         Demuestra tu puntería y velocidad con el arma, para asi volverse indestructible una vez que la inminente amenaza zombie ataque a la humanidad.<br><br><br>
         ¡¿QUE ESTAS ESPERANDO?!<br><br>
@@ -17,10 +17,14 @@
         ¡¡VAMOS!!
       </section>
       <section class="startInfo">
-        instrucciones del juego y/o fotos
+        Debes apuntar y disparar a los tablones con zombies, dispara a cuantos puedas en el tiempo estipulado.<br><br>
+        Elige la dificultad con la que quieres practicar:<br><br>
+        <button id="easy" class="button smlbtn">Facil</button><br>
+        <button id="medium" class="button smlbtn">Medio</button><br>
+        <button id="hard" class="button smlbtn">Dificil</button>
       </section>
     </div>
-    <button id="startButton">COMENZAR</button>
+    <button id="startButton" class="button">COMENZAR</button>
   </div>
   <div id="game-page" class="container">
     <!-- <section id="nivelador">
@@ -50,15 +54,19 @@
       <!-- <img src="./images/zombie1.png" alt=""> -->
     </section>
     <section id="scoreing">
-      <h1>Score: <span id="puntos">0</span></h1>
+      <h1>Score: <br><span id="puntos">0</span></h1>
       <h2>Time left:<br><span id="timer">00:00</span></h1>
     </section>
     
   </div>
-  <div id="end-page" class="container">
-    <div class="container">
-      GAME OVER<br><br>Your total score was <span id="final-score"></span>
+  <div id="end-page" class="">
+    <div class="final-page container">
+      <h1>
+        FIN DEL JUEGO
+      </h1>
+      <br><br>Haz finalizado el entrenamiento con un total de <span id="final-score"></span> puntos.<br><br>Nunca se esta lo suficientemente preparado. Asi que recarga tu arma y ¡VUELVE A INTENTARLO!
     </div>
+    <button id="restart-button" class="button">Reintentar</button>
   </div>
   <script src="./js/tabla.js"></script>
   <script src="./js/scope.js"></script>
