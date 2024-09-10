@@ -14,7 +14,7 @@ let mediumButtonNode = document.querySelector("#medium");
 let hardButtonNode = document.querySelector("#hard");
 let score = 0;
 let easy = false
-let medium = false
+let medium = true
 let hard = false
 const niveles = {
   easy:{frecuency:2000, duration:3000},
@@ -116,15 +116,12 @@ function gameStart() {
   if (easy === true){
     boardFrecuency = niveles.easy.frecuency
     boardDuration = niveles.easy.duration
-    console.log(boardDuration,boardFrecuency)
   } else if (medium === true){
     boardFrecuency = niveles.medium.frecuency
     boardDuration = niveles.medium.duration
-    console.log(boardDuration,boardFrecuency)
   } else if (hard === true){
     boardFrecuency = niveles.hard.frecuency
     boardDuration = niveles.hard.duration
-    console.log(boardDuration,boardFrecuency)
   }
   cronometro();
   boardMechanics()
@@ -259,17 +256,14 @@ easyButtonNode.addEventListener("click", () => {
   easy = true
   medium = false
   hard = false
-  console.log(easy,medium,hard)
 })
 mediumButtonNode.addEventListener("click", () => {
   easy = false
   medium = true
   hard = false
-  console.log(easy,medium,hard)
 })
 hardButtonNode.addEventListener("click", () => {
   easy = false
   medium = false
   hard = true
-  console.log(easy,medium,hard)
 })

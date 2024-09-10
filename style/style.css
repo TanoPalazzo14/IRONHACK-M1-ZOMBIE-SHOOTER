@@ -5,6 +5,7 @@ html {
 body {
   margin: 0px;
   background-image: url("../images/game-background.jpg");
+  background-size: auto;
 }
 
 .startInfo {
@@ -148,7 +149,7 @@ body {
 }
 
 #end-page {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
 }
