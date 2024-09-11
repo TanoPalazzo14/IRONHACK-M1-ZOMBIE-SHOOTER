@@ -26,7 +26,7 @@ const niveles = {
 let boardFrecuency;
 let boardDuration;
 let scope = new Scope();
-const totalTime = 10;
+const totalTime = 30;
 let timeRemaining = totalTime;
 let badGuyCounter;
 let theGame;
