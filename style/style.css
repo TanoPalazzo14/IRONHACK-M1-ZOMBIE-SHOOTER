@@ -163,6 +163,7 @@ body {
   align-self: center;
   text-align: center;
   padding: 45px;
+  font-size: 1.2em;
   margin: auto;
   margin-top: 60px;  
   border-radius: 20px;
@@ -171,6 +172,14 @@ body {
   background-color: rgba(0,0,0,0.8);
   color: rgb(136, 0, 0);
   border: 3px solid rgb(136, 0, 0);
+}
+
+.final-page h1{
+  margin-bottom: 0px;
+}
+
+.final-page p{
+  margin-top: 0px;
 }
 
 @keyframes boardUp {
