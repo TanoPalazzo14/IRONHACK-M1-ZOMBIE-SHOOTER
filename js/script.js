@@ -151,7 +151,7 @@ function boardMechanics() {
 }
 
 function checkShoot() {
-  window.addEventListener("click", () => {
+
       if (playing === true) {
       if (shooting === false && bullets > 0) {
         shooting = true;
@@ -204,7 +204,7 @@ function checkShoot() {
         }, 550);
       }
     }
-  });
+
 }
 
 function reload() {
@@ -217,11 +217,6 @@ function reload() {
 
 function gameLoop() {
 
-  window.addEventListener("mousemove", (e) => {
-    scope.scopeMove(e);
-  });
-
-  checkShoot();
 
   if (bullets === 0 && reloding === false) {
     reloding = true;
@@ -258,10 +253,16 @@ function gameOver() {
   clearAllBoards();
 }
 
+
+window.addEventListener("click", () => {
+  checkShoot();
+});
+window.addEventListener("mousemove", (e) => {
+  scope.scopeMove(e);
+});
 startButtonNode.addEventListener("click", () => {
   gameStart();
 });
-
 restartButtonNode.addEventListener("click", () => {
   endPageNode.style.display = `none`;
   startPageNode.style.display = `flex`;
@@ -269,7 +270,6 @@ restartButtonNode.addEventListener("click", () => {
   timeRemaining = totalTime;
   mediumButtonNode.click();
 });
-
 easyButtonNode.addEventListener("click", () => {
   easyButtonNode.style.backgroundColor = `rgba(100,0,0,0.6)`;
   mediumButtonNode.style.backgroundColor = `rgba(0,0,0,0.8)`;
@@ -294,7 +294,6 @@ hardButtonNode.addEventListener("click", () => {
   medium = false;
   hard = true;
 });
-
 mediumButtonNode.click();
 
 startPageNode.addEventListener("mousemove", () => {
