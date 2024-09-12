@@ -28,8 +28,10 @@ class Tabla {
     setTimeout(() => {
       this.node.style.height = `0px`
       this.node.style.top = `${this.pos.y + this.h}px`
-      this.node.style.display = `none`
-      this.node.remove()
+      setTimeout(() => {
+        this.node.style.display = `none`
+        this.node.remove()
+      }, 150);
     },boardDuration)
   }
 
