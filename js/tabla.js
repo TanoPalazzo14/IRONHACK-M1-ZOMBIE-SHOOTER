@@ -4,7 +4,7 @@ class Tabla {
     this.pos = pos
     this.h = 200
     this.w = 100
-    let personaje = (Math.ceil(Math.random()*5))
+    let personaje = (Math.ceil(Math.random()*9))
     this.node = document.createElement("img")
     this.node.src = `./images/zombie-boards-${personaje}.jpg`
     this.node.style.position = `absolute`
