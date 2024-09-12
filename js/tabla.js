@@ -26,6 +26,8 @@ class Tabla {
     }, 10);
     
     setTimeout(() => {
+      this.node.style.height = `0px`
+      this.node.style.top = `${this.pos.y + this.h}px`
       this.node.style.display = `none`
       this.node.remove()
     },boardDuration)
