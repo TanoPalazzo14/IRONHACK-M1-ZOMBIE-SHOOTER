@@ -8,36 +8,40 @@ class Tabla {
     this.node = document.createElement("img")
     this.node.src = `./images/zombie-boards-${personaje}.jpg`
     this.node.style.position = `absolute`
-    this.node.style.top = `${this.pos.y}px`
     this.node.style.left = `${this.pos.x}px`
-    this.node.style.height = `${this.h}px`
     this.node.style.width = `${this.w}px`
-
-
-    this.node.style.animation = `fadein 0.5s, fadeout 0.9s 2.5s`;
-
-
+    
+    
+    this.node.style.height = `0px`
+    this.node.style.top = `${this.pos.y + this.h}px`
+    
+    this.node.style.transition = `0.15s`
+    
     if (this.pos.posicion === "adelante"){
       enemigosDelanteNode.append(this.node)
     } else {
       enemigosAtrasNode.append(this.node)
     }
-
+    
     setTimeout(() => {
+      this.node.style.height = `${this.h}px`
+      this.node.style.top = `${this.pos.y}px`
+    }, 10);
+
+
+    
+    setTimeout(() => {
+      this.node.style.display = `none`
       this.node.remove()
     },boardDuration)
   }
 
-  goingUp() {
-
-  }
-
   goingDown() {
-
-  }
-
-  getShot() {
-    this.node.style.display = `none`
-    this.node.remove()
+    this.node.style.height = `0px`
+    this.node.style.top = `${this.pos.y + this.h}px`
+    setTimeout(() => {
+      this.node.style.display = `none`
+      this.node.remove()
+    }, 300);
   }
 }

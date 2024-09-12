@@ -67,11 +67,11 @@ const pos4 = {
 
 const rainAudio = new Audio("./audio/rain.mp3");
 rainAudio.loop = true;
-rainAudio.volume = 0.1;
+rainAudio.volume = 0.05;
 rainAudio.muted = false;
 const disparo1Audio = new Audio("./audio/disparo-1.mp3");
 disparo1Audio.loop = false;
-disparo1Audio.volume = 0.5;
+disparo1Audio.volume = 0.4;
 disparo1Audio.muted = false;
 const reloadAudio = new Audio("./audio/reload.mp3");
 reloadAudio.loop = false;
@@ -163,8 +163,8 @@ function checkShoot() {
           pos1.y < scope.y &&
           scope.y < pos1.y + 200
         ) {
-          enemigo1.getShot();
           posicion1Bool = false;
+          enemigo1.goingDown();
           score++;
         } else if (
           posicion2Bool === true &&
@@ -173,8 +173,8 @@ function checkShoot() {
           pos2.y < scope.y &&
           scope.y < pos2.y + 200
         ) {
-          enemigo2.getShot();
           posicion2Bool = false;
+          enemigo2.goingDown();
           score++;
         } else if (
           posicion3Bool === true &&
@@ -183,8 +183,8 @@ function checkShoot() {
           pos3.y < scope.y &&
           scope.y < pos3.y + 200
         ) {
-          enemigo3.getShot();
           posicion3Bool = false;
+          enemigo3.goingDown();
           score++;
         } else if (
           posicion4Bool === true &&
@@ -193,8 +193,8 @@ function checkShoot() {
           pos4.y < scope.y &&
           scope.y < pos4.y + 200
         ) {
-          enemigo4.getShot();
           posicion4Bool = false;
+          enemigo4.goingDown();
           score++;
         }
         bullets--;
@@ -216,11 +216,13 @@ function reload() {
 }
 
 function gameLoop() {
+
   window.addEventListener("mousemove", (e) => {
     scope.scopeMove(e);
   });
 
   checkShoot();
+
   if (bullets === 0 && reloding === false) {
     reloding = true;
     reloadAudio.play();
