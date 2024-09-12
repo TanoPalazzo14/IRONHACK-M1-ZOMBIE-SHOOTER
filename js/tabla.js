@@ -10,11 +10,8 @@ class Tabla {
     this.node.style.position = `absolute`
     this.node.style.left = `${this.pos.x}px`
     this.node.style.width = `${this.w}px`
-    
-    
     this.node.style.height = `0px`
     this.node.style.top = `${this.pos.y + this.h}px`
-    
     this.node.style.transition = `0.15s`
     
     if (this.pos.posicion === "adelante"){
@@ -27,8 +24,6 @@ class Tabla {
       this.node.style.height = `${this.h}px`
       this.node.style.top = `${this.pos.y}px`
     }, 10);
-
-
     
     setTimeout(() => {
       this.node.style.display = `none`
@@ -42,6 +37,6 @@ class Tabla {
     setTimeout(() => {
       this.node.style.display = `none`
       this.node.remove()
-    }, 300);
+    }, 150);
   }
 }

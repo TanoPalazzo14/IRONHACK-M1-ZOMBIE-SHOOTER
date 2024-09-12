@@ -31,7 +31,7 @@ let timeRemaining = totalTime;
 let badGuyCounter;
 let theGame;
 let crono;
-let shooting = false;
+let isShooting = false;
 const clipSize = 12;
 const reloadTime = 2000;
 let bullets = clipSize;
@@ -119,7 +119,7 @@ function cronometro() {
 
 function boardMechanics() {
   badGuyCounter = setInterval(() => {
-      if (playing === true) {
+    if (playing === true) {
       let posicionDeTabla = Math.ceil(Math.random() * 4);
       if (posicionDeTabla === 1 && !posicion1Bool) {
         enemigo1 = new Tabla(pos1);
@@ -151,60 +151,58 @@ function boardMechanics() {
 }
 
 function checkShoot() {
-
-      if (playing === true) {
-      if (shooting === false && bullets > 0) {
-        shooting = true;
-        disparo1Audio.play();
-        if (
-          posicion1Bool === true &&
-          pos1.x < scope.x &&
-          scope.x < pos1.x + 100 &&
-          pos1.y < scope.y &&
-          scope.y < pos1.y + 200
-        ) {
-          posicion1Bool = false;
-          enemigo1.goingDown();
-          score++;
-        } else if (
-          posicion2Bool === true &&
-          pos2.x < scope.x &&
-          scope.x < pos2.x + 100 &&
-          pos2.y < scope.y &&
-          scope.y < pos2.y + 200
-        ) {
-          posicion2Bool = false;
-          enemigo2.goingDown();
-          score++;
-        } else if (
-          posicion3Bool === true &&
-          pos3.x < scope.x &&
-          scope.x < pos3.x + 100 &&
-          pos3.y < scope.y &&
-          scope.y < pos3.y + 200
-        ) {
-          posicion3Bool = false;
-          enemigo3.goingDown();
-          score++;
-        } else if (
-          posicion4Bool === true &&
-          pos4.x < scope.x &&
-          scope.x < pos4.x + 100 &&
-          pos4.y < scope.y &&
-          scope.y < pos4.y + 200
-        ) {
-          posicion4Bool = false;
-          enemigo4.goingDown();
-          score++;
-        }
-        bullets--;
-        bulletsNode.innerText = `${bullets}`;
-        setTimeout(() => {
-          shooting = false;
-        }, 550);
+  if (playing === true) {
+    if (isShooting === false && bullets > 0) {
+      isShooting = true;
+      disparo1Audio.play();
+      if (
+        posicion1Bool === true &&
+        pos1.x < scope.x &&
+        scope.x < pos1.x + 100 &&
+        pos1.y < scope.y &&
+        scope.y < pos1.y + 200
+      ) {
+        posicion1Bool = false;
+        enemigo1.goingDown();
+        score++;
+      } else if (
+        posicion2Bool === true &&
+        pos2.x < scope.x &&
+        scope.x < pos2.x + 100 &&
+        pos2.y < scope.y &&
+        scope.y < pos2.y + 200
+      ) {
+        posicion2Bool = false;
+        enemigo2.goingDown();
+        score++;
+      } else if (
+        posicion3Bool === true &&
+        pos3.x < scope.x &&
+        scope.x < pos3.x + 100 &&
+        pos3.y < scope.y &&
+        scope.y < pos3.y + 200
+      ) {
+        posicion3Bool = false;
+        enemigo3.goingDown();
+        score++;
+      } else if (
+        posicion4Bool === true &&
+        pos4.x < scope.x &&
+        scope.x < pos4.x + 100 &&
+        pos4.y < scope.y &&
+        scope.y < pos4.y + 200
+      ) {
+        posicion4Bool = false;
+        enemigo4.goingDown();
+        score++;
       }
+      bullets--;
+      bulletsNode.innerText = `${bullets}`;
+      setTimeout(() => {
+        isShooting = false;
+      }, 550);
     }
-
+  }
 }
 
 function reload() {
@@ -216,7 +214,6 @@ function reload() {
 }
 
 function gameLoop() {
-
 
   if (bullets === 0 && reloding === false) {
     reloding = true;
@@ -253,8 +250,7 @@ function gameOver() {
   clearAllBoards();
 }
 
-
-window.addEventListener("click", () => {
+gameBoxNode.addEventListener("click", () => {
   checkShoot();
 });
 window.addEventListener("mousemove", (e) => {
