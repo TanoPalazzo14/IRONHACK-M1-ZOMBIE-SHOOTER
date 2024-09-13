@@ -101,15 +101,6 @@ body {
   background-color: rgba(0,0,0,0.6);
 }
 
-#scoreing h1 {
-
-}
-
-#scoreing h2 {
-
-}
-
-
 #game-box img{
   position: absolute;
 }
@@ -180,18 +171,4 @@ body {
 
 .final-page p{
   margin-top: 0px;
-}
-
-@keyframes boardUp {
-  0%    { font-size: 30px; opacity: 0; }
-  40%   { font-size: 40px; opacity: 1; }
-  60%   { font-size: 40px; opacity: 1; }
-  100%  { font-size: 40px; opacity: 0; }
-}
-
-@keyframes boardDown {
-  0%    { font-size: 30px; opacity: 0; }
-  40%   { font-size: 40px; opacity: 1; }
-  60%   { font-size: 40px; opacity: 1; }
-  100%  { font-size: 40px; opacity: 0; }
 }
