@@ -14,10 +14,11 @@ Zombie Bootcamp is a game where the player is in a BYO shooting range, prepping 
 
 - Choose your difficulty between `fácil`,`medio` and `dificil`.
 - Zombie boards spawn automatically.
-- Scope follow the `mouse` position.
+- Scope follows the `mouse` position.
 - To shoot press `click`.
-- If clicked on a wooden board score goes up 1.
-- When timer reaches `0` the game ends.
+- If clicked on a wooden board score goes up `1`.
+- If you ran out of bullets, the gun takes 2 seconds to reload.
+- When timer reaches `00:00` the game ends.
 - The final score is displayed on the final page.
 - Restart the game with the `Reintentar` button.
 
@@ -27,6 +28,7 @@ Zombie Bootcamp is a game where the player is in a BYO shooting range, prepping 
 ## Backlog Functionalities
 
 - Boards with "friends" that decrease score.
+- Bullet images at the right side showing the amount of bullets left.
 - Improoving the overall UI.
 - Optimizing game's performance.
 
@@ -41,8 +43,8 @@ Zombie Bootcamp is a game where the player is in a BYO shooting range, prepping 
 - JS Classes
 - Local Storage
 - JS Audio() and JS Image()
-- Event listeners "mousemove" and "click"
-- SetTimeOut() and setInterval()
+- JS Event listeners "mousemove" and "click"
+- JS SetTimeOut() and setInterval()
 
 
 
@@ -51,7 +53,7 @@ Zombie Bootcamp is a game where the player is in a BYO shooting range, prepping 
 
 - Start Screen
 - Game Screen
-- Game Over Screen
+- Final Screen
 
 
 
@@ -68,7 +70,7 @@ Zombie Bootcamp is a game where the player is in a BYO shooting range, prepping 
 
 ### Slides
 
-**[Link]()**
+**[Link](https://docs.google.com/presentation/d/1bNi4-ZVHCIxMTWRkVb4hgIGKy2R4Oa0h1vt7Qiu_-9w/edit?usp=sharing)**
 
 ## Deploy
 

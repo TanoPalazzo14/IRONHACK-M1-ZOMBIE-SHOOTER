@@ -5,7 +5,15 @@ html {
 body {
   margin: 0px;
   background-image: url("../images/game-background.jpg");
-  background-size: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#game-logo {
+  position: absolute;
+  top: 80px;
+  left: 60px;
+  height: 200px;
 }
 
 .startInfo {
